@@ -1,0 +1,124 @@
+/**
+ * Rolls a random number between 1-6, and calculates the number of petals based on the random numbers
+ * 
+ * @author Nathan Roller -02254188
+ * @version 2/17/2016
+ */
+public class PetalsGame
+{
+    private int dice1;
+    private int dice2;
+    private int dice3;
+    private int dice4;
+    private int dice5;
+    
+    public PetalsGame()
+    {
+    }
+    
+    public void rollDice()
+    {
+        dice1 = (int) (Math.random()*6 + 1);
+        dice2 = (int) (Math.random()*6 + 1);
+        dice3 = (int) (Math.random()*6 + 1);
+        dice4 = (int) (Math.random()*6 + 1);
+        dice5 = (int) (Math.random()*6 + 1);
+    }
+    
+    public void printDice()
+    {
+        System.out.println(dice1 + ", " + dice2 + ", " + dice3 + ", " + dice4 + ", " + dice5);
+    }
+    
+    public int getPetals1()
+    {
+        int petals = 0;
+        switch(dice1)
+        {
+            case 1:
+            case 2:
+            case 4:
+            case 6:
+                petals = 0;
+                break;
+            case 3: petals = 2; break;
+            case 5: petals = 4; break;
+        }
+        return petals;
+    }
+    
+    public int getPetals2()
+    {
+        int petals = 0;
+        switch(dice2)
+        {
+            case 1:
+            case 2:
+            case 4:
+            case 6:
+                petals = 0;
+                break;
+            case 3: petals = 2; break;
+            case 5: petals = 4; break;
+        }
+        return petals;
+    }
+    
+    public int getPetals3()
+    {
+        int petals = 0;
+        switch(dice3)
+        {
+            case 1:
+            case 2:
+            case 4:
+            case 6:
+                petals = 0;
+                break;
+            case 3: petals = 2; break;
+            case 5: petals = 4; break;
+        }
+        return petals;
+    }
+    
+    public int getPetals4()
+    {
+        int petals = 0;
+        switch(dice4)
+        {
+            case 1:
+            case 2:
+            case 4:
+            case 6:
+                petals = 0;
+                break;
+            case 3: petals = 2; break;
+            case 5: petals = 4; break;
+        }
+        return petals;
+    }
+    
+    public int getPetals5()
+    {
+        int petals = 0;
+        switch(dice5)
+        {
+            case 1:
+            case 2:
+            case 4:
+            case 6:
+                petals = 0;
+                break;
+            case 3: petals = 2; break;
+            case 5: petals = 4; break;
+        }
+        return petals;
+    }
+    
+    public int calculateAllPetals()
+    {
+        int totalPetals = getPetals1() + getPetals2() + getPetals3() + getPetals4()
+                          + getPetals5();
+        return totalPetals;
+    }
+}
