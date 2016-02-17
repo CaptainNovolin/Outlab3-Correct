@@ -47,6 +47,15 @@ public class Driver
                         game.printDice();   //print out values of the dice
                         System.out.print("\nHow many petals do you think are around the rose? >");
                         guess = in.nextInt();
+                        if(guess == game.calculateAllPetals())
+                        {
+                            //System.out.println("Correct! Good job!");
+                        }
+                        else
+                        {
+                            System.out.println("Sorry! The correct answer was " 
+                            + game.calculateAllPetals());
+                        }
                 default:
                     System.out.println("That is an invalid choice.  Please try again.\n");
             }
