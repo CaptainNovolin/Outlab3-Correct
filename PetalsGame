@@ -27,7 +27,7 @@ public class PetalsGame
     
     public void printDice()
     {
-        System.out.println(dice1 + ", " + dice2 + ", " + dice3 + ", " + dice4 + ", " + dice5);
+        System.out.println("You rolled the following: " + dice1 + ", " + dice2 + ", " + dice3 + ", " + dice4 + ", " + dice5);
     }
     
     public int getPetals1()
